@@ -79,6 +79,7 @@ namespace ShutdownTimer
           cmdNeustartPlanen.Enabled = true;
           cmbAnzahl.Enabled = true;
           cmbEinheit.Enabled = true;
+          trayicon.Text = "Kein Timer gestartet";
         }
         else
         {
@@ -171,6 +172,7 @@ namespace ShutdownTimer
           ShowPushInfo(getNotifcationText(diff));
         }
         lblRemaining.Text = $"{diff.Hours.ToString("F0")} Stunden {diff.Minutes.ToString("F0")} Minuten {diff.Seconds.ToString("F0")} Sekunden";
+        trayicon.Text = "ShutdownTimer - Noch " + lblRemaining.Text;
       }
     }
 
